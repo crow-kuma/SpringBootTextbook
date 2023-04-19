@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hello</title>
+</head>
+<body>
+	<form action="/hello4" method="post">
+		<input type="text" name="name" placeholder="お名前を入力してください">
+		<input type="submit" value="実行"> 
+	</form>
+</body>
+</html>
