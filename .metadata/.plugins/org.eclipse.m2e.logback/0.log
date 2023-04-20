@@ -1091,3 +1091,60 @@
 2023-04-20 03:00:07,722 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
 2023-04-20 03:00:07,808 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
 2023-04-20 03:00:07,812 [Worker-55: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Registration2/src/test/resources
+2023-04-20 03:07:30,405 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-20 16:17:02,023 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-04-20 16:32:52,918 [Worker-20: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Game:0.0.1-SNAPSHOT @ /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/pom.xml.
+2023-04-20 16:32:53,564 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Game/src/main/java
+2023-04-20 16:32:53,564 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Game/src/main/resources
+2023-04-20 16:32:53,566 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Game/src/main/resources
+2023-04-20 16:32:53,568 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Game/src/test/java
+2023-04-20 16:32:53,742 [Worker-20: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 1 sec
+2023-04-20 16:32:53,744 [Worker-20: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-04-20 16:32:53,929 [Worker-20: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Game:0.0.1-SNAPSHOT @ /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/pom.xml.
+2023-04-20 16:32:54,064 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Game/src/main/java
+2023-04-20 16:32:54,064 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Game/src/main/resources
+2023-04-20 16:32:54,064 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Game/src/main/resources
+2023-04-20 16:32:54,065 [Worker-20: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Game/src/test/java
+2023-04-20 16:32:54,271 [Worker-20: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2023-04-20 16:32:54,689 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:54,705 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-20 16:32:54,708 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/src/test/resources
+2023-04-20 16:32:55,151 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:55,161 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-20 16:32:55,164 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Hello/src/test/resources
+2023-04-20 16:32:55,451 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:55,461 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-20 16:32:55,463 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Hello2/src/test/resources
+2023-04-20 16:32:55,746 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:55,756 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-20 16:32:55,759 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Hello3/src/test/resources
+2023-04-20 16:32:56,027 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:56,038 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:56,043 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Hello4/src/test/resources
+2023-04-20 16:32:56,357 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:56,367 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:56,371 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Hello5/src/test/resources
+2023-04-20 16:32:56,675 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:56,685 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2023-04-20 16:32:56,690 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Registration/src/test/resources
+2023-04-20 16:32:57,001 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:32:57,011 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 2 resources
+2023-04-20 16:32:57,016 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Registration2/src/test/resources
+2023-04-20 16:33:40,788 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:33:40,804 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-20 16:33:40,809 [Worker-23: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/src/test/resources
+2023-04-20 16:34:07,074 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-20 16:34:07,075 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 16:34:07,078 [Worker-10: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/src/test/resources
+2023-04-20 17:12:47,372 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 17:12:47,445 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 17:12:47,449 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/src/test/resources
+2023-04-20 17:13:21,900 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 17:13:21,961 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 17:13:21,964 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/src/test/resources
+2023-04-20 17:14:48,938 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 17:14:48,985 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 17:14:48,989 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/src/test/resources
+2023-04-20 17:23:37,928 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-04-20 17:23:37,930 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource
+2023-04-20 17:23:37,936 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /Users/NN/Documents/workspace-spring-tool-suite-4-4.18.0.RELEASE/workspace/Game/src/test/resources
