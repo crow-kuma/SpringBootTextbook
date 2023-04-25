@@ -1,6 +1,10 @@
 package com.example.todolist.controller;
 
 import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -41,14 +45,18 @@ public class TodoListController {
 		todoDaoImpl = new TodoDaoImpl(entityManager);
 	}
 
-	// Todo一覧表示 A: Todolist
+	// Todo一覧表示 A: Todolist  E: Todolist6
 	@GetMapping("/todo")
-	public ModelAndView showTodoList(ModelAndView mv) {
+	public ModelAndView showTodoList(ModelAndView mv, @PageableDefault(page = 0, size = 5, sort = "id") Pageable pageable) {
 		// 一覧を検索して表示する
 		mv.setViewName("todoList");
-		List<Todo> todoList = todoRepository.findAll();
-		mv.addObject("todoList", todoList);
+		
+		Page<Todo> todoPage = todoRepository.findAll(pageable);
 		mv.addObject("todoQuery", new TodoQuery()); //Todolist4で追加
+		mv.addObject("todoPage", todoPage);
+		mv.addObject("todoList", todoPage.getContent());
+		session.setAttribute("todoQuery", new TodoQuery());
+		
 		return mv;
 	}
 
@@ -127,22 +135,44 @@ public class TodoListController {
 	// レコードを検索する A: todolist4  E: todolist5
 	// 検索ボタンが押されたときの処理
 	@PostMapping("/todo/query")
-	public ModelAndView queryTodo(@ModelAttribute TodoQuery todoQuery, BindingResult result, ModelAndView mv) {
+	public ModelAndView queryTodo(@ModelAttribute TodoQuery todoQuery, 
+			BindingResult result, 
+			@PageableDefault(page = 0, size = 5) Pageable pageable, 
+			ModelAndView mv) {
 		mv.setViewName("todoList");
 
-		List<Todo> todoList = null;
+		Page<Todo> todoPage = null;
 		if (todoService.isValid(todoQuery, result)) {
 			// エラーがなければ検索
-			// todoList = todoService.doQuery(todoQuery);
-			// JPQLの検索
-			// todoList = todoDaoImpl.findByJPQL(todoQuery);
-			// Criteria APIでの検索
-			todoList = todoDaoImpl.findByCriteria(todoQuery);
+			todoPage = todoDaoImpl.findByCriteria(todoQuery, pageable);
+			
+			// 入力された検索条件をsessionに保存
+			session.setAttribute("todoQuery", todoQuery);
+			
+			mv.addObject("todoPage", todoPage);
+			mv.addObject("todoList", todoPage.getContent());
+		} else {
+			// エラーがあった場合、検索
+			mv.addObject("todoPage", null);
+			mv.addObject("todoList", null);
 		}
-		
-		// mv.addObject("todoQuery", todoQuery);
-		mv.addObject("todoList", todoList);
 
+		return mv;
+	}
+	
+	@GetMapping("/todo/query")
+	public ModelAndView queryTodo(@PageableDefault(page = 0, size = 5) Pageable pageable,
+			ModelAndView mv) {
+		mv.setViewName("todoList");
+		
+		//sessionに保存されている条件で検索
+		TodoQuery todoQuery = (TodoQuery)session.getAttribute("todoQuery");
+		Page<Todo> todoPage = todoDaoImpl.findByCriteria(todoQuery, pageable);
+		
+		mv.addObject("todoQuery", todoQuery); // 検索条件表示用
+		mv.addObject("todoPage", todoPage); // page情報
+		mv.addObject("todoList", todoPage.getContent());
+		
 		return mv;
 	}
 }

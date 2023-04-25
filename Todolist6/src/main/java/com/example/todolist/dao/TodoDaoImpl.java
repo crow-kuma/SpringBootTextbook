@@ -3,12 +3,17 @@ package com.example.todolist.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+
 import com.example.todolist.common.Utils;
 import com.example.todolist.entity.Todo;
 import com.example.todolist.entity.Todo_;
 import com.example.todolist.form.TodoQuery;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
@@ -21,7 +26,7 @@ public class TodoDaoImpl implements TodoDao {
 
 	// Criteria API による検索
 	@Override
-	public List<Todo> findByCriteria(TodoQuery todoQuery) {
+	public Page<Todo> findByCriteria(TodoQuery todoQuery, Pageable pageable) {
 		CriteriaBuilder builder = entityManager.getCriteriaBuilder();
 		CriteriaQuery<Todo> query = builder.createQuery(Todo.class);
 		Root<Todo> root = query.from(Todo.class);
@@ -97,10 +102,19 @@ public class TodoDaoImpl implements TodoDao {
 		Predicate[] predArray = new Predicate[predicates.size()];
 		predicates.toArray(predArray);
 		query = query.select(root).where(predArray).orderBy(builder.asc(root.get(Todo_.id)));
+		
+		// クエリ生成
+		TypedQuery<Todo> typedQuery = entityManager.createQuery(query);
+		// 該当レコード数取得
+		int totalRows = typedQuery.getResultList().size();
+		// 先頭レコードの位置設定
+		typedQuery.setFirstResult(pageable.getPageNumber() * pageable.getPageSize());
+		// 1ページあたりの件数
+		typedQuery.setMaxResults(pageable.getPageSize());
 
 		//検索
-		List <Todo> list = entityManager.createQuery(query).getResultList();
+		Page<Todo> page = new PageImpl<Todo>(typedQuery.getResultList(), pageable, totalRows);
 
-		return list;
+		return page;
 	}
 }
