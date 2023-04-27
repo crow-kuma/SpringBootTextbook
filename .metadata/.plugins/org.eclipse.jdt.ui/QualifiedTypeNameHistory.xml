@@ -49,4 +49,8 @@
     <fullyQualifiedTypeName name="jakarta.persistence.criteria.CriteriaQuery"/>
     <fullyQualifiedTypeName name="jakarta.persistence.criteria.Root"/>
     <fullyQualifiedTypeName name="com.example.todolist.entity.Todo_"/>
+    <fullyQualifiedTypeName name="org.springframework.data.web.PageableDefault"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
+    <fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.TypedQuery"/>
 </qualifiedTypeNameHistroy>
